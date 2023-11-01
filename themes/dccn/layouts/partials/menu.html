@@ -13,8 +13,8 @@ Renders a menu for the given menu ID.
 {{- with index site.Menus $menuID }}
   <nav class="navbar navbar-expand-lg navbar-dark App-header">
     <div class="container-fluid">
-      <a class="navbar-brand" href="/">
-        <img src="{{ .Site.BaseURL }}/logo.svg" class="icon-banner"/>
+      <a class="navbar-brand" href="{{ site.BaseURL }}">
+        <img src="{{ site.BaseURL }}/logo.svg" class="icon-banner"/>
       </a>
       <button 
         class="navbar-toggler"
@@ -31,7 +31,7 @@ Renders a menu for the given menu ID.
           {{- partial "inline/menu/walk.html" (dict "page" $page "menuEntries" .) }}
         </ul>
         <a class="btn btn-link navbar-tool"
-          href="{{ .Site.BaseURL }}/site_taxonomies"
+          href="{{ site.BaseURL }}/site_taxonomies"
           role="button">
           <i class="bi bi-collection"></i>
         </a>

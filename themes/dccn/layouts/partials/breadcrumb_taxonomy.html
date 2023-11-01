@@ -3,7 +3,7 @@
         {{- range .Ancestors.Reverse }}
             <li class="breadcrumb-item">
                 {{- if eq .Name "Home" }}
-                    <a href="{{ .Site.BaseURL }}/site_taxonomies">
+                    <a href="{{ site.BaseURL }}/site_taxonomies">
                         <i class="bi bi-collection-fill"></i>
                     </a>
                 {{- else }}
