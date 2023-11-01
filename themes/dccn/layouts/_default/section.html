@@ -2,7 +2,7 @@
   {{- if gt (len .Pages) 0 }}
     <div class="d-flex flex-column flex-shrink-0 p-1 bg-light" style="width: 250px;">
       <ul class="nav nav-pills flex-column mb-auto" id="{{.Title}}_sessions">
-        {{ range where .Pages.ByTitle "Kind" "in" "section" }}
+        {{ range where .Pages.ByWeight "Kind" "in" "section" }}
         <li class="nav-item">
           <a 
             href="{{ .RelPermalink }}"
@@ -15,7 +15,7 @@
           </a>
         </li>
         {{- end }}
-        {{ range where .Pages.ByTitle "Kind" "==" "page" }}
+        {{ range where .Pages.ByWeight "Kind" "==" "page" }}
         <li class="nav-item">
           <a 
             href="{{ .RelPermalink }}"
