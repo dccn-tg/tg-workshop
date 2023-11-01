@@ -1,0 +1,16 @@
+{{ define "main" }}
+    <div class="container-fluid">
+        {{ partial "breadcrumb_taxonomy.html" . }}
+        <div class="page-body">
+            {{/*  <h1>Pages in {{ .Type }} {{ .Title }}</h1>  */}}
+            {{ .Content }}
+            <ul>
+                {{- range .Data.Pages }}
+                    <li>
+                        <a href="{{ .Page.RelPermalink }}">{{ .Page.LinkTitle }}
+                    </li>
+                {{- end }}                
+            </ul>
+        </div>
+    </div>
+{{ end }}

@@ -1,0 +1,36 @@
+{{- /*
+Renders a carousel with given slide images.
+
+@context {page} page The current page.
+@context {images} images The slide images.
+
+@example: {{ partial "carousel.html" (dict "images" $images "page" .) }}
+*/}}
+{{- $page := .page }}
+{{- $images := .images }}
+
+<div class="container-fluid">
+    <div class="row justify-content-center">
+        <div class="col-lg-6">
+            <div id="funSlides" class="carousel carousel-dark slide">
+                <div class="carousel-inner">
+                    {{- range $idx,$val := $images }}
+                        <div class="carousel-item {{ if eq $idx 0 }}active{{ end }}">
+                            <img src="{{$val.RelPermalink}}" class="d-block w-100" alt="Slide {{ add $idx 1 }}">
+                        </div>
+                    {{- end }}
+                </div>
+
+                <!-- pagination buttons -->
+                <button class="carousel-control-prev" type="button" data-bs-target="#funSlides" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#funSlides" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>

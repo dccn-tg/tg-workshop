@@ -1,0 +1,11 @@
+{{ define "main" }}
+    <div class="container-fluid">
+        <div class="page-body">
+            <h1>{{ .Site.Title }}</h1>
+            {{ .Content }}
+            <!-- fun pictures -->
+            {{ $images := resources.Match "home_fun_slide*.png" }}
+            {{ partial "carousel.html" (dict "images" $images "page" .) }}
+        </div>
+    </div>
+{{ end }}

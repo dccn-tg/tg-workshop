@@ -1,0 +1,41 @@
+{{ define "main" }}
+  {{- if gt (len .Pages) 0 }}
+    <div class="d-flex flex-column flex-shrink-0 p-1 bg-light" style="width: 250px;">
+      <ul class="nav nav-pills flex-column mb-auto" id="{{.Title}}_sessions">
+        {{ range where .Pages.ByTitle "Kind" "in" "section" }}
+        <li class="nav-item">
+          <a 
+            href="{{ .RelPermalink }}"
+            class="nav-link"
+            aria-current="page">
+            <div class="row">
+              <div class="col col-2" style="padding-right:0;"><i class="bi bi-folder2"></i></div>
+              <div class="col col-10" style="padding-left:0;">{{ .LinkTitle }}</div>
+            </div>
+          </a>
+        </li>
+        {{- end }}
+        {{ range where .Pages.ByTitle "Kind" "==" "page" }}
+        <li class="nav-item">
+          <a 
+            href="{{ .RelPermalink }}"
+            class="nav-link"
+            aria-current="page">
+            <div class="row">
+              <div class="col col-2" style="padding-right:0;"><i class="bi bi-file-earmark"></i></div>
+              <div class="col col-10" style="padding-left:0;">{{ .LinkTitle }}</div>
+            </div>
+          </a>
+        </li>
+        {{- end }}
+      </ul>
+    </div>
+  {{- end }}
+  <div class="container-fluid">
+    {{ partial "breadcrumb.html" . }}
+    <div class="page-body">
+      <h1>{{ .Title }}</h1>
+      {{ .Content }}
+    </div>
+  </div>
+{{ end }}

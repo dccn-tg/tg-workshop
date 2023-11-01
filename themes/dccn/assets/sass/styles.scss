@@ -1,0 +1,168 @@
+.jumbotron {
+    padding: 4rem 2rem;
+    margin-bottom: 2rem;
+    background-color: var(--bs-light);
+    border-radius: .3rem;  
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    background-color: #fff;
+    height: 100vh;
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-size: 18px;
+}
+
+header {
+    border-bottom: 0px;
+    margin-bottom: 1rem;
+}
+
+footer {
+    height: 30px;
+}
+
+.navbar-tool {
+    --bs-btn-color: var(--bs-navbar-color);
+    --bs-btn-hover-color: var(--bs-navbar-hover-color);
+    --bs-btn-active-color: var(--bs-navbar-active-color);
+}
+
+.badge {
+    a:link, a:hover, a:active, a:visited {
+        color: #fff;
+    }
+}
+
+.navbar-custom {
+    margin-bottom: 0px;
+    height: 46px;
+    font-size: 16px;
+}
+
+.navbar-brand {
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.navbar-toggler {
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+
+.navbar-collapse.show {
+    background: #222;
+    color: #fff;
+    font-size: 14px;
+    padding: 10px;
+}
+
+.navbar-nav {
+    padding: 0;
+    --bs-nav-link-padding-y: 0;
+}
+
+.nav-item.active {
+    background: #222;
+}
+
+.nav-pills {
+    font-size: 14px;
+    flex-wrap: nowrap;
+}
+
+.dropdown-menu {
+    padding: 10px;
+}
+
+.dropdown-item {
+    padding: 0px;
+    font-size: 14px;
+    height: 32px;
+    line-height: 32px;
+}
+
+.icon-banner {
+    width: 32px;
+    margin-bottom: 7px;
+}
+
+.breadcrumb {
+    margin-top: 10px;
+    position: fixed;
+    top: 56px;
+    width: 100%;
+    z-index: 5;
+    background: #fff;
+    margin: 0;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.accordion-button {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.carousel-inner > .carousel-item > img {
+    width: 661px;
+    height:372px;
+}
+
+.highlight {
+    display: block;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    padding: 2em 1em 1em 1em;
+    border-style: solid;
+    border-radius: var(--bs-border-radius);
+    border-color: var(--bs-border-color);
+    border-width: var(--bs-border-width);
+}
+
+.App-header-top {
+    background: #f45709 url("/gradient-bar-top.png") 0 0 no-repeat;
+    padding: 0px 0px 0px 0px;
+    height: 10px;
+    position: fixed;
+    top: 0px;
+    z-index: 10;
+    width: 100%;
+}
+
+.App-header {
+    background: #8E0000;
+    padding: 0px 0px 0px 0px;
+    height: 46px;
+    line-height: 46px;
+    position: fixed;
+    top: 10px;
+    z-index: 10;
+    width: 100%;
+}
+
+.App-main {
+    background: none;
+    position: relative;
+    top: 56px;
+    display: flex;
+    flex-wrap: nowrap;
+    height: 100vh;
+    height: -webkit-fill-available;
+    max-height: calc(100vh - 56px);
+}
+
+.page-body {
+    position: relative;
+    top: 75px;
+}
+
+.page-content {
+    margin-top: 20px;
+    padding-bottom: 30px;
+}

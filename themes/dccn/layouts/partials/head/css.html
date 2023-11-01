@@ -1,0 +1,23 @@
+{{- with resources.Get "sass/main.scss" }}
+  {{ $options := (dict "targetPath" "css/styles.css" "outputStyle" "compressed") }}
+  {{- if eq hugo.Environment "development" }}
+    {{- with . | toCSS $options }}
+    <link rel="stylesheet" href="{{ .RelPermalink }}" media="screen,print">
+    {{- end }}
+  {{- else }}
+    {{- with . | toCSS $options | minify | fingerprint }}
+      <link rel="stylesheet" href="{{ .RelPermalink }}" media="screen,print" integrity="{{ .Data.Integrity }}" crossorigin="anonymous">
+    {{- end }}
+  {{- end }}
+{{- end }}
+
+{{- with resources.Get "css/syntax.css" }}
+  <link rel="stylesheet" href="{{ .RelPermalink }}">
+{{- end }}
+
+{{- with resources.Get "css/bootstrap-print.min.css" }}
+  <link rel="stylesheet" href="{{ .RelPermalink }}">
+{{- end }}
+
+<!-- pagefind CSS -->
+<link href="/pagefind/pagefind-ui.css" rel="stylesheet">

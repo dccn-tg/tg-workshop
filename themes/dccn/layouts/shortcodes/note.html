@@ -1,0 +1,14 @@
+
+{{ $class := .Get "type" }}
+
+{{ if (in (slice "alert" "error" "danger") $class) }}
+    {{ $class = "danger" }}
+{{ else if (in (slice "warn" "warning") $class) }}
+    {{ $class = "warning" }}
+{{ else }}
+    {{ $class = "primary" }}
+{{ end }}
+
+<div class="alert alert-{{$class}}" role="alert">
+    {{ .Inner }}
+</div>

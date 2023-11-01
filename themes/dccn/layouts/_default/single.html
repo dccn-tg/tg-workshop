@@ -1,0 +1,87 @@
+{{ define "main" }}
+  <div class="container">
+    {{ partial "breadcrumb.html" . }}
+    <div class="page-body" data-pagefind-body>
+      <h1 data-pagefind-meta="owner:{{ .Params.owner }}">{{ .Title }}</h1>
+      <!-- front matter -->
+      <div class="accordion" id="frontMatter">
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button 
+              class="accordion-button"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#frontMatterTable"
+              aria-expanded="true"
+              aria-controls="frontMatterTable">
+              Front Matter
+            </button>
+          </h2>
+          <div
+            id="frontMatterTable"
+            class="accordion-collapse collapse show"
+            data-bs-parent="#frontMatter">
+            <div class="accordion-body">
+              <!-- front matter table -->
+              <table class="table table-sm">
+                <tbody>
+                  <tr>
+                    <th scope="row">Document Owner</th>
+                    <td>{{ .Params.owner }}</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Classification</th>
+                    <td>{{ .Params.classification }}</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Effective date</th>
+                    <td>
+                      <!-- Urh! isset requires to use lowercase (.dateEffective => "dateeffective") -->
+                      {{- if (isset .Params "dateeffective") }}
+                        {{ time.AsTime .Params.dateEffective | time.Format ":date_long" }}
+                      {{- end }}
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Revision date</th>
+                    <td>
+                      {{- if (isset .Params "daterevision") }}
+                        {{ time.AsTime .Params.dateRevision | time.Format ":date_long" }}
+                      {{- end }}
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Last change</th>
+                    <td>
+                      {{- if .GitInfo }}
+                        {{ .GitInfo.Subject }}
+                        <b>by <a href="mailto:{{.GitInfo.AuthorEmail}}">{{ .GitInfo.AuthorName }}</a></b>
+                        ({{ .Lastmod | time.Format ":date_long" }})
+                      {{- end }}
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Domains</th>
+                    <td>
+                      {{ partial "terms.html" (dict "taxonomy" "domains" "page" .) }}
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Controls</th>
+                    <td>
+                      {{ partial "terms.html" (dict "taxonomy" "controls" "page" .) }}
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- main page content -->
+      <div class="page-content">
+        {{ .Content }}
+      </div>
+    </div>
+  </div>
+{{ end }}

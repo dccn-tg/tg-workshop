@@ -1,0 +1,7 @@
+<div class="text-center">
+    <img 
+        src="{{ .Destination | safeURL }}"
+        alt="{{ .Text }}"
+        class="img-thumbnail"
+        {{ with .Title }} title="{{ . }}"{{ end }} />
+</div>

@@ -1,0 +1,18 @@
+<nav class="d-print-none" aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        {{- range .Ancestors.Reverse }}
+            <li class="breadcrumb-item">
+                {{- if eq .Name "Home" }}
+                    <a href="/site_taxonomies">
+                        <i class="bi bi-collection-fill"></i>
+                    </a>
+                {{- else }}
+                    <a href="{{ .RelPermalink }}">{{ .Name }}</a>
+                {{- end }}
+            </li>
+        {{- end }}
+        <li class="breadcrumb-item active" aria-current="page">
+            {{ .Name }}
+        </li>
+    </ol>
+</nav>

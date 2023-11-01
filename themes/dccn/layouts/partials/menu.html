@@ -1,0 +1,94 @@
+{{- /*
+Renders a menu for the given menu ID.
+
+@context {page} page The current page.
+@context {string} menuID The menu ID.
+
+@example: {{ partial "menu.html" (dict "menuID" "main" "page" .) }}
+*/}}
+
+{{- $page := .page }}
+{{- $menuID := .menuID }}
+
+{{- with index site.Menus $menuID }}
+  <nav class="navbar navbar-expand-lg navbar-dark App-header">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="/">
+        <img src="/logo.svg" class="icon-banner"/>
+      </a>
+      <button 
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          {{- partial "inline/menu/walk.html" (dict "page" $page "menuEntries" .) }}
+        </ul>
+        <a class="btn btn-link navbar-tool"
+          href="/site_taxonomies"
+          role="button">
+          <i class="bi bi-collection"></i>
+        </a>
+        <a class="btn btn-link navbar-tool" data-bs-toggle="offcanvas"
+          href="#searchBoard"
+          role="button"
+          aria-controls="searchBoard">
+          <i class="bi bi-search"></i>
+        </a>
+      </div>
+    </div>
+  </nav>
+{{- end }}
+{{- partial "search.html" . }}
+
+{{- define "partials/inline/menu/walk.html" }}
+  {{- $page := .page }}
+  {{- range .menuEntries.ByWeight.Reverse }}
+    {{- $attrs := dict "href" .URL }}
+    {{- if $page.IsMenuCurrent .Menu . }}
+      {{- $attrs = merge $attrs (dict "classActive" "active" "ariaCurrent" "page") }}
+    {{- else if $page.HasMenuCurrent .Menu .}}
+      {{- $attrs = merge $attrs (dict "classActive" "active" "ariaCurrent" "true") }}
+    {{- else }}
+      {{- $attrs = merge $attrs (dict "classActive" "" "ariaCurrent" "false") }}
+    {{- end }}
+
+    {{/*  {{- if .Children }}
+      <li class="nav-item dropdown {{ $attrs.classActive }}">
+        <a class="nav-link {{ $attrs.classActive }} dropdown-toggle" href="#" id="navDropdownMenu_{{.Identifier}}" role="button"
+          data-bs-toggle="dropdown" aria-expanded="false">
+          {{ or (T .Identifier) .Name | safeHTML }}
+        </a>
+        {{- with .Children }}
+          {{- partial "inline/menu/dropdown.html" (dict "page" $page "menuEntries" .) }}
+        {{- end }}
+      </li>
+    {{- else }}  */}}
+      <li class="nav-item {{ $attrs.classActive }}">
+        <a class="nav-link {{ $attrs.classActive }}" href="{{ $attrs.href }}" aria-current="{{ $attrs.ariaCurrent }}">
+          {{ or (T .Identifier) .Name | safeHTML }}
+        </a>
+      </li>
+    {{/*  {{- end }}  */}}
+  {{- end }}
+{{- end }}
+
+{{- define "partials/inline/menu/dropdown.html" }}
+  {{- $page := .page }}
+  <ul class="dropdown-menu">
+  {{- range .menuEntries }}
+    {{- $attrs := dict "href" .URL }}
+      <li>
+        <a class="dropdown-item" href="{{ $attrs.href }}" aria-current="true">
+          {{ or (T .Identifier) .Name | safeHTML }}
+        </a>
+      </li>
+  {{- end }}
+  </ul>
+{{- end }}
