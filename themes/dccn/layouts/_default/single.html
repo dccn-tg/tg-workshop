@@ -1,5 +1,10 @@
 {{ define "main" }}
-  <div class="container">
+    <!-- empty toc returns '<nav id="TableOfContent"></nav>' that is in length of 32 -->
+    {{ if (gt (len .TableOfContents) 32 ) }}
+      {{ partial "toc.html" .}}
+    {{ end }}
+
+    <div class="container-fluid">
     {{ partial "breadcrumb.html" . }}
     <div class="page-body" data-pagefind-body>
       <h1 data-pagefind-meta="owner:{{ .Params.owner }}">{{ .Title }}</h1>
@@ -83,6 +88,7 @@
       <!-- main page content -->
       <div class="page-content">
         {{ .Content }}
+      </div>
       </div>
     </div>
   </div>

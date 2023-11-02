@@ -1,5 +1,16 @@
 <nav class="d-print-none" aria-label="breadcrumb">
     <ol class="breadcrumb">
+        <!-- empty toc returns '<nav id="TableOfContent"></nav>' that is in length of 32 -->
+        {{ if (gt (len .TableOfContents) 32 ) }}
+            <li class="breadcrumb-item">
+                <a href="#toc"
+                    data-bs-toggle="collapse"
+                    aria-controls="toc">
+                    <i class="bi bi-list"></i>
+                </a>
+            </li>
+        {{ end }}
+
         {{- range .Ancestors.Reverse }}
             <li class="breadcrumb-item">
                 <a href="{{ .RelPermalink }}">
