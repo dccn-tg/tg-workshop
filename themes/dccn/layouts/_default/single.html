@@ -7,7 +7,7 @@
     <div class="container-fluid">
     {{ partial "breadcrumb.html" . }}
     <div class="page-body" data-pagefind-body>
-      <h1 data-pagefind-meta="owner:{{ .Params.owner }}">{{ .Title }}</h1>
+      <h1>{{ .Title }}</h1>
       {{ if .Params.fontmatter }}
         <!-- front matter -->
         <div class="accordion" id="frontMatter">
