@@ -35,3 +35,11 @@ $ ls -a ~/home/projects/myrepo
 {{<note>}}
 It doesn't matter if the directory is empty of not.  Existing files in the directory will not be considered as untracked files after the repository is initialized.
 {{</note>}}
+
+## section 1
+
+### subsection 1
+
+### subsection 2
+
+## section 2
