@@ -26,6 +26,12 @@
           "name": "draft",
           "type": "draft",
           "default": false
+        },
+        {
+          "title": "weight",
+          "name": "weight",
+          "type": "number",
+          "default": 1
         }
       ]
     },
