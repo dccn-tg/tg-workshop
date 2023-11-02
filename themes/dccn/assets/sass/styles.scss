@@ -125,6 +125,70 @@ footer {
     border-width: var(--bs-border-width);
 }
 
+// #TableOfContents {
+//     font-size: 13px !important;
+//     max-height: 85vh;
+//     overflow: auto;
+//     padding: 15px 5px !important;
+
+//     ul {
+
+//         padding-inline-start: 20px;
+
+//         li::marker {
+//             content: "\F1A2";
+//             font-family: bootstrap-icons !important;
+//             line-height: 1;
+//         }
+
+//         li {
+//             padding-left: 5px;
+//         }
+    
+//         &:not(:first-child) {
+//             margin-left: 10px;
+//         }
+//     }
+
+// }
+
+#TableOfContents > ul > li > a {
+  font-weight: bold;
+}
+
+#TableOfContents {
+    padding-bottom: 2rem;
+    font-size: 16px;
+
+    ul {
+        padding-inline-start: 0px;
+
+        li {
+            list-style-type: none;
+        }
+
+        li a {
+            display: block;
+            padding: 10px 30px;
+            border: 0px;
+            font-size: 16px;
+            position: relative;  
+        }
+        
+        &:not(:first-child) {
+            li a {
+                font-size: 90%;
+                display: block;
+                margin-left: 10px;
+                border: 0px;
+                //color: rgb(241, 237, 237);
+                font-size: 14px;
+                position: relative;
+            }
+        }
+    }
+}
+
 .App-header-top {
     background: #f45709 url("/gradient-bar-top.png") 0 0 no-repeat;
     padding: 0px 0px 0px 0px;
