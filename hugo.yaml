@@ -18,11 +18,15 @@ menu:
   - name: Git 
     identifier: docs
     pageRef: /git
-    weight: 100
+    weight: 3
   - name: Markdown 
     identifier: markdown
     pageRef: /markdown
-    weight: 10
+    weight: 2
+  - name: Docker
+    identifier: docker
+    pageRef: /docker
+    weight: 1
 markup:
   highlight:
     anchorLineNos: false
