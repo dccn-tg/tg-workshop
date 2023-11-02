@@ -1,0 +1,102 @@
+{
+  "$schema": "https://frontmatter.codes/frontmatter.schema.json",
+  "frontMatter.taxonomy.contentTypes": [
+    {
+      "name": "frontpage",
+      "pageBundle": false,
+      "fields": [
+        {
+          "title": "Title",
+          "name": "title",
+          "type": "string"
+        },
+        {
+          "title": "Description",
+          "name": "description",
+          "type": "string"
+        },
+        {
+          "title": "Date",
+          "name": "date",
+          "type": "datetime",
+          "default": "{{now}}"
+        },
+        {
+          "title": "draft",
+          "name": "draft",
+          "type": "draft",
+          "default": false
+        }
+      ]
+    },
+    {
+      "name": "document",
+      "pageBundle": false,
+      "fields": [
+        {
+          "title": "Title",
+          "name": "title",
+          "type": "string"
+        },
+        {
+          "title": "Description",
+          "name": "description",
+          "type": "string"
+        },
+        {
+          "title": "Date",
+          "name": "date",
+          "type": "datetime"
+        },
+        {
+          "title": "draft",
+          "name": "draft",
+          "type": "draft"
+        },
+        {
+          "title": "Owner",
+          "name": "owner",
+          "type": "string"
+        },
+        {
+          "title": "Classification",
+          "name": "classification",
+          "type": "string"
+        },
+        {
+          "title": "Revision date",
+          "name": "dateRevision",
+          "type": "datetime"
+        },
+        {
+          "title": "Effective date",
+          "name": "dateEffective",
+          "type": "datetime"
+        },
+        {
+          "title": "Controls",
+          "name": "controls",
+          "type": "list"
+        },
+        {
+          "title": "Domains",
+          "name": "domains",
+          "type": "list"
+        },
+        {
+          "title": "weight",
+          "name": "weight",
+          "type": "number"
+        }
+      ]
+    }
+  ],
+  "frontMatter.framework.id": "hugo",
+  "frontMatter.content.publicFolder": "static",
+  "frontMatter.preview.host": "http://localhost:1313",
+  "frontMatter.content.pageFolders": [
+    {
+      "path": "[[workspace]]/content"
+    }
+  ]
+}
