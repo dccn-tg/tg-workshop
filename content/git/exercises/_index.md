@@ -1,14 +1,8 @@
 ---
-title: 'Exercises'
-date: 2023-11-01T18:29:29+01:00
-draft: false
-owner:
-classification: 'internal'
-dateRevision: 2023-11-01T18:29:29+01:00
-dateEffective: 2023-11-01T18:29:29+01:00
-controls:
-domains:
-weight: 2
+type: frontpage
+title: Git exercises
+date: 2023-11-02T08:55:18.348Z
+weight: 1
 ---
 
 Exercises

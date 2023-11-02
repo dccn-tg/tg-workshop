@@ -1,13 +1,15 @@
 ---
+type: document
 title: 'Clone Git repository'
+description: ""
 date: 2023-11-01T18:29:43+01:00
 draft: false
 owner:
-classification: 'internal'
+classification: internal
 dateRevision: 2023-11-01T18:29:43+01:00
 dateEffective: 2023-11-01T18:29:43+01:00
-controls:
-domains:
+controls: []
+domains: []
 weight: 2
 ---
 
