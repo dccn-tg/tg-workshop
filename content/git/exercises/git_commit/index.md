@@ -55,17 +55,23 @@ Add a short sentence in the text field on top of the `Commit` button and click t
 
 ___Congratulations! You made your first Git commit.___
 
-## Make another change
+## Make more changes
 
 Let's make more changes to the README.md file.  Add the following lines to the file:
 
 ```markdown
 ## Introduction
 
-This project is for learning Git.
+This project is for learning [Git](https://git-scm.com).
+
+![git logo](Git-Logo-2Color.png)
 ```
 
-Save the file, and commit the change to the repository with a message `added introduction to README`.
+Save the file.
+
+Download the [Git Logo](https://git-scm.com/images/logos/downloads/Git-Logo-2Color.png) and add the logo into current project by dragging it into the VScode.
+
+Now commit the changes with a message `added introduction to README with Git logo`.
 
 {{<note type="tip">}}
 A commit can involve multiple changes.  It is practicle that related changes are made in a single commit. 
