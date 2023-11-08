@@ -10,7 +10,7 @@ dateRevision: 2023-11-01T18:29:43+01:00
 dateEffective: 2023-11-01T18:29:43+01:00
 controls: []
 domains: []
-weight: 2
+weight: 3
 ---
 
 Most of time, we will start from cloning an existing Git repository from remote.  In this exercise, we will use the VSCode to clone a repository on GitHub.

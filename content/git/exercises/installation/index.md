@@ -1,6 +1,6 @@
 ---
 type: document
-title: System setup
+title: Installation
 description: prepare and configure the system
 date: 2023-11-08T17:41:26+01:00
 draft: false
