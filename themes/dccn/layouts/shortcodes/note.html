@@ -10,5 +10,5 @@
 {{ end }}
 
 <div class="alert alert-{{$class}}" role="alert">
-    {{ .Inner }}
+    {{ .Inner  | markdownify }}
 </div>
