@@ -1,6 +1,6 @@
 ---
 type: document
-title: 'Commit a change'
+title: 'Commit changes'
 description: ""
 date: 2023-11-01T18:29:43+01:00
 draft: false
@@ -35,34 +35,52 @@ The numerical tag indicates number of changes has been made since you open the f
 
 Because it is a new file, Git considers it as a __untracked__ file and therefore it is flagged with a `U`.
 
-## Stage the change
+## Stage a change
 
 Before we can commit this new file into the Git repository, we need to stage it.  This is done by click on the `+` symbol next the `U` flag.  After that, you will see the change on `README.md` is moved into the stage area.
 
 ![](figures/vscode-git-stage.png)
 
-## Commit the change
+## Commit a change
 
+After the changes are in the stage area, one can proceed to commit the file.  For committing a change into the Git repository, a message about the change is required.
 
+{{<note type="tip">}}
+When composing the commit message, try to follow the [Git 50/72 rule](https://dev.to/noelworden/improving-your-commit-message-with-the-50-72-rule-3g79).
+{{</note>}}
 
-1. create a folder and add a new file
+Add a short sentence in the text field on top of the `Commit` button and click the `Commit` button.
 
-1. edit the new file and save it
+![](figures/vscode-git-commit.png)
 
-1. stage the change
+___Congratulations! You made your first Git commit.___
 
-1. commit the change
+## Make another change
 
-1. view the commit log
+Let's make more changes to the README.md file.  Add the following lines to the file:
 
-    In VSCode, this can only be done by using the virtual terminal and run the `git log` command.
+```markdown
+## Introduction
 
-1. make more changes in different files
+This project is for learning Git.
+```
 
-1. stage changes and commit
+Save the file, and commit the change to the repository with a message `added introduction to README`.
 
-1. visualize the change logs
+{{<note type="tip">}}
+A commit can involve multiple changes.  It is practicle that related changes are made in a single commit. 
+{{</note>}}
 
-1. rollback commited changes
+## Check Git history
 
-1. discard changes
+By default, VSCode supports viewing git change history via individual file's timeline.  However, the git log view provided by the __Git History__ extention is more intuitive.
+
+Press the `F1` key to toggle the tool menu in VSCode and select __Git: View History (git log)__. You should see two commits we have just made in the newly opened tab.
+
+![](figures/vscode-git-log.png)
+
+## Roll back
+
+Don't like the commited changes? You can always undo the last commit in VSCode. The change(s) involved in the undo-ed commit will be put back to the stage area.  One can then remove the change(s) from the stage area to the file system.
+
+![](figures/vscode-git-undo-commit.png)
