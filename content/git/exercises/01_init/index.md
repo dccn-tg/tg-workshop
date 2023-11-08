@@ -15,12 +15,20 @@ weight: 1
 
 Initializing a new git repository is as simple as
 
-1. go to a directory, and
+1. open a terminal,
+1. create a new directory or go to an existing directory,
 1. run `git init`
 
-Assuming we are going to initialize a new repository in an existing directory `~/projects/myrepo`.  We run
+{{<note>}}
+It doesn't matter if the directory is empty of not.  Existing files in the directory will be considered as untracked files after the repository is initialized.
+{{</note>}}
+
+## Linux and MacOS
+
+Assuming we are going to initialize a new repository in a new directory `~/projects/myrepo`.  We run
 
 ```bash
+$ mkdir ~/projects/myrepo
 $ cd ~/projects/myrepo
 $ git init
 ```
@@ -32,14 +40,26 @@ $ ls -a ~/home/projects/myrepo
 .git
 ```
 
-{{<note>}}
-It doesn't matter if the directory is empty of not.  Existing files in the directory will not be considered as untracked files after the repository is initialized.
-{{</note>}}
+## Windows
 
-## section 1
+Use __Git CMD__ as the terminal.  Assuming we are going to initialize a new repository in a new folder `%USERPROFILE%\Documents\myrepo`.  We do
 
-### subsection 1
+```PowerShell
+C:\> mkdir %USERPROFILE%\Documents\myrepo
+C:\> cd %USERPROFILE%\Documents\myrepo
+C:\> git init
+```
 
-### subsection 2
+A hidden directory `.git` is created
 
-## section 2
+```PowerShell
+C:\> dir /a:h
+ Volume in drive C has no label.
+ Volume Serial Number is 1AC2-CFF3
+
+ Directory of C:\Users\Hong\Documents\myrepo
+
+02/11/2023  06:15    <DIR>          .git
+               0 File(s)              0 bytes
+               1 Dir(s)  13.321.207.808 bytes free
+```
