@@ -37,7 +37,7 @@ Because it is a new file, Git considers it as a __untracked__ file and therefore
 
 ## Stage a change
 
-Before we can commit this new file into the Git repository, we need to stage it.  This is done by click on the `+` symbol next the `U` flag.  After that, you will see the change on `README.md` is moved into the stage area.
+Before we can commit this new file into the Git repository, we need to stage it.  This is done by clicking the `+` symbol next the `U` flag.  After that, you will see the change on `README.md` is moved into the stage area.
 
 ![](figures/vscode-git-stage.png)
 
