@@ -16,7 +16,7 @@ weight: 1
 Hong is going to visit his families in Taiwan during the Christmas holiday.  After 5 years not meeting his families in person, Hong wants to surprise them with a small gift specially from the Europe.  Could you give your suggestion to Hong?
 
 <!---
-Make a session with your name as the session title, and add suggestions in bullet items; like the example below.
+Instruction: make a session with your name as the session title, and add suggestions in bullet items; like the example below.
 -->
 
 ## Hong

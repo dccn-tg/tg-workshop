@@ -13,7 +13,19 @@ domains: []
 weight: 3
 ---
 
-Most of time, we will start from cloning an existing Git repository from remote.  In this exercise, we will use the VSCode to clone a repository on GitHub.
+Usually you will start from cloning an existing Git repository from remote.  In this exercise, we will use the VSCode to clone a repository on GitHub.
+
+## Prerequisite
+
+- signing up to [GitHub](https://github.com) for a personal account
+- being a member of the GitHub organization [dccn-tg](https://github.com/dccn-tg)
+
+{{<note type="tip">}}
+Strickly speaking, cloning a public GitHub repository does not require a GitHub account.  However, we will need the GitHub account to make contribution to the public repository in later exercises.  
+{{</note>}}
+
+
+## Clone the repository
 
 1. open VSCode to clone a repository from GitHub
 
