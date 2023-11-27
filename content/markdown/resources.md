@@ -24,6 +24,7 @@ weight: 1
 
 ## CMS frameworks
 
-- [ReadTheDocs](https://readthedocs.org)
-- [HUGO](https://hugo.io)
+- [ReadTheDocs](https://readthedocs.org): used by the [HPC wiki](https://hpc.dccn.nl)
+- [HUGO](https://gohugo.io): used to generate this website and the [new C&CZ website](https://cncz.science.ru.nl/en/)
+- [Jekyll](https://jekyllrb.com/): used by the [Fieldtrip website](https://www.fieldtriptoolbox.org/)
 - [MKDocs](https://www.mkdocs.org/)
