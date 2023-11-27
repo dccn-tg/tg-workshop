@@ -1,6 +1,6 @@
 ---
 type: document
-title: 'Gift suggestion'
+title: 'Gift tips'
 description: 'Git/Markdown exercise with a story'
 date: 2023-11-25T09:04:07+01:00
 draft: true
