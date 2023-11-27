@@ -18,9 +18,9 @@ weight: 1
 - [Markdown Cheatsheet](https://www.markdownguide.org/cheat-sheet/)
 - [GitHub Markdown Flavor](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax)
 
-## Tools
+## Personal notebook
 
-- [Joplin](https://joplinapp.org/): build personal note-taking tools with data synchronized via cloud storage, e.g. SURFDrive.
+- [Joplin](https://joplinapp.org/): note-taking application with data synchronized via cloud storage, e.g. SURFDrive
 
 ## CMS frameworks
 
