@@ -13,6 +13,8 @@ domains: []
 weight: 1
 ---
 
+[Markdown Guide](https://www.markdownguide.org) is a very good site containing comprehensive information about Markdown.  Highly recommended 👍
+
 ## Syntax references
 
 - [Markdown Cheatsheet](https://www.markdownguide.org/cheat-sheet/)
