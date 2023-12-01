@@ -29,6 +29,10 @@ In the branch, you will notice a panel summaring the differences between this br
 
 ## Request for review
 
+{{<note type="warning">}}
+The pull request might contain merge conflicts.  You should always resolve merge conflicts before requesting a review on your changes.
+{{</note>}}
+
 When opening pull request, you should provide a title and some description about your changes.  Next to it, you can assign people to review your changes.
 
 ![](figures/github-pull-request-reviewers.png)
@@ -37,6 +41,18 @@ When opening pull request, you should provide a title and some description about
 
 Once you are assigned as a reviewer of a pull request, you will receive an email notification from GitHub.   Go to the pull request page on GitHub to perform the review accordingly.
 
+In the "Files changed" tab of the pull request, reviewer can provide inline comments as show in the screenshot below.
+
+![](figures/github-inline-comment.png)
+
+__Don't forget__ to conclude your round of review by click the "Submit review".
+
+![](figures/github-submit-review.png)
+
 ## Approve and merge
 
+Once the change is approved by the reviewer, the pull request can be merged back to the main branch from which a new release can be made.  Merging can be done directly from the pull-request page. 
+
 ## Remove branch
+
+After the merge is done, it is recommended to remove the branch from GitHub to avoid confusion.  Removing branch on GitHub doesn't mean that the branch is removed from your local Git repository.
