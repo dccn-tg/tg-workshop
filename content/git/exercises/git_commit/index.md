@@ -71,6 +71,10 @@ Save the file.
 
 Download the [Git Logo](https://git-scm.com/images/logos/downloads/Git-Logo-2Color.png) and add the logo into current project by dragging it into the VScode.
 
+__You just wrote the README file in Markdown!!__  VSCode supports Markdown preview.  You can toggle the preview as shown in the screenshot below.
+
+![](figures/vscode-markdown-preview.png)
+
 Now commit the changes with a message `added introduction to README with Git logo`.
 
 {{<note type="tip">}}
