@@ -1,6 +1,6 @@
 ---
 type: document
-title: 'Branching and pull request'
+title: 'Branching and push'
 description: ""
 date: 2023-11-01T18:29:43+01:00
 draft: false
