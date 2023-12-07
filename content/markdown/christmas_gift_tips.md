@@ -23,5 +23,11 @@ Instruction: make a session with your name as the session title, and add suggest
 
 - stroopwafels
 - dutch vodka
-- lekkele warme sjokolade melch
 
+## Marek
+
+- dutch Vodka? Get the proper Polish booze :)
+
+## Emiel
+
+- lekkele warme sjokolade melch
