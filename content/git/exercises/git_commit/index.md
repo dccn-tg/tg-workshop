@@ -31,7 +31,7 @@ After opening the folder in VSCode, create a new file called `README.md`, write 
 
 ![](figures/vscode-new-file.png)
 
-The numerical tag indicates number of changes has been made since you open the folder.  If you click on the __Source Control__ icon, you will see the change concerns the `README.md` file we just added.
+The numerical tag shows the amount of changes made on the filesystem. If you click on the __Source Control__ icon, you will see the change concerns the `README.md` file we just added.
 
 Because it is a new file, Git considers it as a __untracked__ file and therefore it is flagged with a `U`.
 
@@ -71,6 +71,10 @@ Save the file.
 
 Download the [Git Logo](https://git-scm.com/images/logos/downloads/Git-Logo-2Color.png) and add the logo into current project by dragging it into the VScode.
 
+__You just wrote the README file in Markdown!!__  VSCode supports Markdown preview.  You can toggle the preview as shown in the screenshot below.
+
+![](figures/vscode-markdown-preview.png)
+
 Now commit the changes with a message `added introduction to README with Git logo`.
 
 {{<note type="tip">}}
@@ -87,6 +91,6 @@ Press the `F1` key to toggle the tool menu in VSCode and select __Git: View Hist
 
 ## Roll back
 
-Don't like the commited changes? You can always undo the last commit in VSCode. The change(s) involved in the undo-ed commit will be put back to the stage area.  One can then remove the change(s) from the stage area to the file system.
+Don't like the commited changes? You can always undo the last commit in VSCode. The change(s) involved in the undo-ed commit will be put back to the stage area.  One can then remove the change(s) from the stage area.  After that, the changes you made remain on the filesystem and can be further reversed or stashed completely.
 
 ![](figures/vscode-git-undo-commit.png)
