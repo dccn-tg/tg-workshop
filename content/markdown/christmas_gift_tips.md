@@ -3,7 +3,7 @@ type: document
 title: 'Gift tips'
 description: 'Git/Markdown exercise with a story'
 date: 2023-11-25T09:04:07+01:00
-draft: true
+draft: false
 owner: 'Hurng-Chun Lee'
 classification: internal
 dateRevision: 2023-11-25T09:04:07+01:00
@@ -23,6 +23,8 @@ Instruction: make a session with your name as the session title, and add suggest
 
 - stroopwafels
 - dutch vodka
+- tulips
+- clogs
 
 ## Marek
 
