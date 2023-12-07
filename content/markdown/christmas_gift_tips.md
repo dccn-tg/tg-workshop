@@ -25,5 +25,5 @@ Instruction: make a session with your name as the session title, and add suggest
 - dutch vodka
 
 # Rene
-- Drago fruit
+- Dragon fruit
 - oliebollen
