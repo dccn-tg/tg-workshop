@@ -23,3 +23,7 @@ Instruction: make a session with your name as the session title, and add suggest
 
 - stroopwafels
 - dutch vodka
+
+## Marek
+
+- dutch Vodka? Get the proper Polish booze :)
