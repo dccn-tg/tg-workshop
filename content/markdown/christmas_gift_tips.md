@@ -23,3 +23,8 @@ Instruction: make a session with your name as the session title, and add suggest
 
 - stroopwafels
 - dutch vodka
+
+## Ed
+
+1. dropjes (boerderij dropjes zijn de lekkerste)
+2. klompen
