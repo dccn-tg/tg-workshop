@@ -26,6 +26,11 @@ Instruction: make a session with your name as the session title, and add suggest
 - tulips
 - clogs
 
+# Rene
+- Dragon fruit
+- oliebollen
+- clogs
+
 ## Ed
 
 1. dropjes (boerderij dropjes zijn de lekkerste)
